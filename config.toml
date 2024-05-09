@@ -70,15 +70,8 @@ rv-brand = "inotia00"
 build-mode = "apk"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 arch = "all"
+riplib = false
 
-[YouTube-Extended-inotia00]
-app-name = "YouTube"
-version = "auto"
-patches-source = "inotia00/revanced-patches"
-integrations-source = "inotia00/revanced-integrations"
-rv-brand = "inotia00"
-build-mode = "apk"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-arch = "all"
+
 
 

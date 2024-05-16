@@ -6,6 +6,8 @@ enable-magisk-update = true   # set this to false if you do not want to receive 
 # you can use rvmm-config-gen to generate a config
 
 patches-version = "v4.8.0-dev.6" 
+integrations-version = "v1.9.0-dev.5" 
+
 
 [YouTube]
 enabled = false

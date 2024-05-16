@@ -6,7 +6,7 @@ Use [zygisk-detach](https://github.com/j-hc/zygisk-detach) to detach root ReVanc
 [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module)
   
 Integrations: inotia00/revanced-integrations-1.8.2.apk  
-Patches: inotia00/revanced-patches-4.7.1.jar  
-[Changelog](https://github.com/inotia00/revanced-patches/releases/tag/v4.7.1)
+Patches: inotia00/revanced-patches-4.8.0-dev.6.jar  
+[Changelog](https://github.com/inotia00/revanced-patches/releases/tag/v4.8.0-dev.6)
 
 CLI: j-hc/revanced-cli-4.6.0-all.jar    

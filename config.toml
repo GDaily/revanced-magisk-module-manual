@@ -5,17 +5,18 @@ enable-magisk-update = true   # set this to false if you do not want to receive 
 
 # you can use rvmm-config-gen to generate a config
 
-patches-version = "v4.8.0-dev.6" 
-integrations-version = "v1.9.0-dev.5" 
+# patches-version = "v4.8.0-dev.6" 
+# integrations-version = "v1.9.0-dev.5" 
 
 
-[YouTube]
-enabled = false
+[YouTube] 
 build-mode = "both"
 excluded-patches = ""
 included-patches = ""
 version = "auto"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
+arch = "all"
+riplib = false
 
 [Music]
 enabled = false
@@ -66,6 +67,7 @@ archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.a
 arch = "both"
 
 [YouTube-Extended]
+enabled = false
 app-name = "YouTube"
 version = "auto"
 patches-source = "inotia00/revanced-patches"

@@ -67,7 +67,7 @@ archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.a
 arch = "both"
 
 [YouTube-Extended]
-enabled = false
+
 app-name = "YouTube"
 version = "auto"
 patches-source = "inotia00/revanced-patches"

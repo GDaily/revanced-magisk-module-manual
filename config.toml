@@ -5,20 +5,20 @@ enable-magisk-update = true   # set this to false if you do not want to receive 
 
 # you can use rvmm-config-gen to generate a config
 
-# [YouTube]
+[YouTube]
+enabled = false
+excluded-patches = ""
+included-patches = ""
+version = "auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
+riplib = false 
 
-# excluded-patches = ""
-# included-patches = ""
-# version = "auto"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
-# riplib = false 
-
-# [Music]
-# enabled = false
-# build-mode = "both"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
-# arch = "both"
+[Music]
+enabled = false
+build-mode = "both"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
+arch = "both"
 
 [Music-Extended]
 enabled = false
@@ -43,13 +43,13 @@ arch = "both"
 # apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
 # riplib = false 
 
-# [YouTube-Extended]
-# app-name = "YouTube"
-# patches-source = "inotia00/revanced-patches"
-# integrations-source = "inotia00/revanced-integrations"
-# cli-source = "inotia00/revanced-cli"
-# rv-brand = "ReVanced Extended"
-# build-mode = "both"
-# apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
-# riplib = false 
+[YouTube-Extended]
+app-name = "YouTube"
+patches-source = "inotia00/revanced-patches"
+integrations-source = "inotia00/revanced-integrations"
+cli-source = "inotia00/revanced-cli"
+rv-brand = "ReVanced Extended"
+build-mode = "both"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
+riplib = false 
 

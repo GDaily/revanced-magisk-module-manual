@@ -6,7 +6,7 @@ enable-magisk-update = true   # set this to false if you do not want to receive 
 # you can use rvmm-config-gen to generate a config
 
 [YouTube]
-
+enabled = false
 excluded-patches = ""
 included-patches = ""
 version = "auto"
@@ -44,7 +44,7 @@ arch = "both"
 # riplib = false 
 
 [YouTube-Extended]
-enabled = false
+
 app-name = "YouTube"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"

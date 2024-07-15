@@ -10,8 +10,10 @@ enable-magisk-update = true   # set this to false if you do not want to receive 
 excluded-patches = ""
 included-patches = ""
 version = "auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
 riplib = false 
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube" # fallback
+
 
 [Music]
 enabled = false

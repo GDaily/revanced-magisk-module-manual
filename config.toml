@@ -11,8 +11,9 @@ excluded-patches = ""
 included-patches = ""
 version = "auto"
 riplib = false 
-archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube" # fallback
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube" # fallback
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 
 
 [Music]

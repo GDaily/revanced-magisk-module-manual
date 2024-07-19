@@ -6,7 +6,7 @@ enable-magisk-update = true   # set this to false if you do not want to receive 
 # you can use rvmm-config-gen to generate a config
 
 [YouTube]
-
+enabled = false
 excluded-patches = ""
 included-patches = ""
 version = "auto"
@@ -35,8 +35,7 @@ archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.a
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 arch = "both"
 
-#[YouTube-Extended]
-enabled = false
+[YouTube-Extended] 
 app-name = "YouTube"
 patches-source = "anddea/revanced-patches"
 integrations-source = "anddea/revanced-integrations"
@@ -46,7 +45,7 @@ build-mode = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
 riplib = false 
 
-[YouTube-Extended]
+#[YouTube-Extended]
 enabled = false
 app-name = "YouTube"
 patches-source = "inotia00/revanced-patches"

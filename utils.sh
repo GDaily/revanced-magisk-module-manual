@@ -80,13 +80,14 @@ get_rv_prebuilts() {
 			if [ "$tag" = "Integrations" ]; then integs_file=$file; fi
 			echo "$tag: $(cut -d/ -f1 <<<"$src")/${name}  " >>"${cl_dir}/changelog.md"
 		else
+			local for_err=$file
 			if [ "$ver" = "latest" ]; then
-				file=$(grep -v dev <<<"$file" | head -1)
-			else file=$(grep "${ver#v}" <<<"$file" | head -1); fi
+				file=$(grep -v '/[^/]*dev[^/]*$' <<<"$file" | head -1)
+			else file=$(grep "/[^/]*${ver#v}[^/]*\$" <<<"$file" | head -1); fi
+			if [ -z "$file" ]; then abort "filter fail: '$for_err' with '$ver'"; fi
 			name=$(basename "$file")
 			tag_name=$(cut -d'-' -f3- <<<"$name")
 			tag_name=v${tag_name%.*}
-			if [ "$tag_name" = "v" ]; then abort "wrong ver"; fi
 		fi
 
 		echo -n "$file "
@@ -105,7 +106,7 @@ get_rv_prebuilts() {
 	done
 	echo
 
-	if [ "$integs_file" ]; then
+	if [ "$integs_file" ] && [ "$REMOVE_RV_INTEGRATIONS_CHECKS" = true ]; then
 		if ! (
 			mkdir -p "${integs_file}-zip" || return 1
 			unzip -qo "${integs_file}" -d "${integs_file}-zip" || return 1
@@ -118,7 +119,6 @@ get_rv_prebuilts() {
 			echo >&2 "Patching revanced-integrations failed"
 		fi
 		rm -r "${integs_file}-zip" || :
-
 	fi
 }
 
@@ -424,7 +424,7 @@ check_sig() {
 
 build_rv() {
 	eval "declare -A args=${1#*=}"
-	local version pkg_name
+	local version="" pkg_name=""
 	local mode_arg=${args[build_mode]} version_mode=${args[version]}
 	local app_name=${args[app_name]}
 	local app_name_l=${app_name,,}
@@ -543,9 +543,11 @@ build_rv() {
 				fi
 			fi
 		fi
-		if ! patch_apk "$stock_apk" "$patched_apk" "${patcher_args[*]}" "${args[cli]}" "${args[ptjar]}"; then
-			epr "Building '${table}' failed!"
-			return 0
+		if [ "${NORB:-}" != true ] || [ ! -f "$patched_apk" ]; then
+			if ! patch_apk "$stock_apk" "$patched_apk" "${patcher_args[*]}" "${args[cli]}" "${args[ptjar]}"; then
+				epr "Building '${table}' failed!"
+				return 0
+			fi
 		fi
 		if [ "$build_mode" = apk ]; then
 			local apk_output="${BUILD_DIR}/${app_name_l}-${rv_brand_f}-v${version_f}-${arch_f}.apk"
@@ -595,7 +597,7 @@ MODULE_ARCH=$ma" >"$1/config"
 module_prop() {
 	echo "id=${1}
 name=${2}
-version=v${3}
+version=v${3} (${NEXT_VER_CODE})
 versionCode=${NEXT_VER_CODE}
 author=j-hc
 description=${4}" >"${6}/module.prop"

@@ -5,11 +5,11 @@ enable-magisk-update = true   # set this to false if you do not want to receive 
 
 # you can use rvmm-config-gen to generate a config
 
+
 [YouTube]
 build-mode = "both"
 excluded-patches = ""
 included-patches = ""
-version = "apk"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
-#archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
-#apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube" # fallback
+version = "auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube" # fallback
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"

@@ -45,11 +45,13 @@ get_rv_prebuilts() {
 	for src_ver in "$cli_src CLI $cli_ver" "$integrations_src Integrations $integrations_ver" "$patches_src Patches $patches_ver"; do
 		set -- $src_ver
 		local src=$1 tag=$2 ver=${3-} ext
-		if [ "$tag" = "CLI" ] || [ "$tag" = "Patches" ]; then
+		if [ "$tag" = "CLI" ]; then
 			ext="jar"
+		elif [ "$tag" = "Patches" ]; then
+			ext="rvp"
 		elif [ "$tag" = "Integrations" ]; then
 			ext="apk"
-		else abort unreachable; fi
+		fi
 		local dir=${src%/*}
 		dir=${TEMP_DIR}/${dir,,}-rv
 		[ -d "$dir" ] || mkdir "$dir"

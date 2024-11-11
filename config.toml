@@ -11,5 +11,6 @@ build-mode = "both"
 excluded-patches = ""
 included-patches = ""
 version = "auto"
+cli-source = "ReVanced/revanced-cli"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube" # fallback
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"

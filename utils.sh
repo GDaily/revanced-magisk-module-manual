@@ -68,7 +68,11 @@ get_rv_prebuilts() {
 		fi
 
 		local url file tag_name name
-		file=$(find "$dir" -name "revanced-${tag,,}-${name_ver#v}.${ext}" -type f 2>/dev/null)
+		if [ "$ext" = "rvp" ]; then
+			file=$(find "$dir" -name "${tag,,}-${name_ver#v}.${ext}" -type f 2>/dev/null)
+		else
+			file=$(find "$dir" -name "revanced-${tag,,}-${name_ver#v}.${ext}" -type f 2>/dev/null)
+		fi
 		if [ -z "$file" ]; then
 			local resp asset name
 			resp=$(gh_req "$rv_rel" -) || return 1

@@ -98,8 +98,10 @@ get_rv_prebuilts() {
 
 		echo -n "$file "
 		if [ "$tag" = "Patches" ]; then
-			name="patches-${tag_name}.json"
+			name="patches-${tag_name}.json"  
 			file="${dir}/${name}"
+      			echo "$name"  
+      			echo "$file"
 			if [ ! -f "$file" ]; then
 				resp=$(gh_req "$rv_rel" -) || return 1
 				if [ "$ver" = "dev" ]; then resp=$(jq -r '.[0]' <<<"$resp"); fi

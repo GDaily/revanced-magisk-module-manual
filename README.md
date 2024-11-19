@@ -8,7 +8,7 @@ forked 從 j-hc/revanced-magisk-module
 
 每日CI任務會自動檢查一次，自動產生APK
 
-更多開發者分之倉庫可從下方網頁取得
+更多開發者分支版倉庫可從下方網頁取得
 https://www.gdaily.org/30590/youtube-revanced-apk
 
 

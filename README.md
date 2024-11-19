@@ -2,11 +2,9 @@
 
 forked 從 j-hc/revanced-magisk-module
 
-設定檔只追蹤更新 ReVanced 官方原始版穩定版本
+設定檔只追蹤更新 [![ReVanced](https://github.com/revanced/revanced-patches)](https://github.com/revanced/revanced-patches)  官方原始版穩定版本
 
 每日CI任務會自動檢查一次
-
-https://github.com/revanced/revanced-patches
 
 更多開發者分之倉庫可從下方網頁取得
 https://www.gdaily.org/30590/youtube-revanced-apk

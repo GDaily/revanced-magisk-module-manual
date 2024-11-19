@@ -2,7 +2,7 @@
 
 forked 從 j-hc/revanced-magisk-module
 
-設定檔只追蹤更新 [![ReVanced](https://github.com/revanced/revanced-patches)](https://github.com/revanced/revanced-patches)  官方原始版穩定版本
+設定檔只追蹤更新 [![ReVanced](https://github.com/revanced/revanced-patches)]  官方原始版穩定版本
 
 每日CI任務會自動檢查一次
 

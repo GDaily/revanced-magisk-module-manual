@@ -1,3 +1,17 @@
+
+# 關於此倉庫
+
+forked 從 j-hc/revanced-magisk-module
+
+設定檔只追蹤更新  [ReVanced](https://github.com/revanced/revanced-patches)  官方原始版穩定版本
+
+
+每日CI任務會自動檢查一次，自動產生APK
+
+更多開發者分支版倉庫可從下方網頁取得
+https://www.gdaily.org/30590/youtube-revanced-apk
+
+
 # ReVanced Magisk Module
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/rvc_magisk)
 [![CI](https://github.com/j-hc/revanced-magisk-module/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/j-hc/revanced-magisk-module/actions/workflows/ci.yml)
